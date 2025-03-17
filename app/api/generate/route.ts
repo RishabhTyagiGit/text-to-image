@@ -20,6 +20,7 @@ export async function POST(req: Request) {
     const response = await client.images.generate({
       model: "black-forest-labs/flux-schnell",
       response_format: "b64_json",
+      // @ts-ignore
       extra_body: {
         response_extension: "webp",
         width: 512,
